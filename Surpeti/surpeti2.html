@@ -5,6 +5,69 @@
 		<title>Surpeti</title>
 	</head>
     <body bgcolor=black style="color: white">
+	
+	
+	    <hr />   
+		<style>input[type="range"] {    display: block;    width: 100%;}</style>
+        <div>
+            <table border="0" width="100%">
+                <tr>
+                    <td width="10%" style="display: none;">
+                        <div style="color: white"><button id="PlayerVolume">100%</button></div>
+                    </td>
+                    <td width="100%">
+                        <input id="Player-vol-control" type="range" min="0" max="100" step="1" value="100" oninput="PlayerSetVolume(this.value)" onchange="PlayerSetVolume(this.value)"/>
+                    </td>
+                        
+                </tr>
+            </table>
+        </div>                    
+        <script>
+            $("#Player-vol-control").slider({
+                tooltip: 'always'
+            });
+            function PlayerSetVolume(PlayerVal)
+            {
+                var Player1 = document.getElementById("Player1");
+                var Player2 = document.getElementById("Player2");
+                document.getElementById("PlayerVolume").innerHTML = PlayerVal + "%";
+                console.log('Before: ' + Player1.volume);
+                console.log('Before: ' + Player2.volume);
+                Player1.volume = PlayerVal / 100;
+                Player2.volume = PlayerVal / 100;
+                console.log('After: ' + Player1.volume);
+                console.log('After: ' + Player2.volume);
+            }
+        </script>
+        <hr/>
+        
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
         <br />
         <table border="0" align="center">
             <tr id="TanpuraSection">
