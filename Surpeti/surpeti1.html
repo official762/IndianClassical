@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Surpeti</title>
+	</head>
+    <body bgcolor=black style="color: white">
+        <br />
+        <table border="0" align="center">
+            <tr id="TanpuraSection">
+                <td></td>
+                <td>
+                    <select id="SelectPlayer" onchange="SelectPlayer()">
+                        <option value="">Select Scale...</option>
+                        <option value="A">A</option>
+                        <option value="Ash">A#</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="Csh">C#</option>
+                        <option value="D">D</option>
+                        <option value="Dsh">D#</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="Fsh">F#</option>
+                        <option value="G">G</option>
+                        <option value="Gsh">G#</option>
+                    </select>
+                    <button id="PlayerPauseButton" onclick="PlayerPause()" style="display: none">Pause</button>
+                </td>
+                <td><button id="PlayerPlayButton" onclick="PlayerPlay()">Play</button></td>
+                <td style="display: none">
+                    <audio controls tabindex="0" id="Player1" preload="load" src=""></audio>
+                    <audio controls tabindex="0" id="Player2" preload="load" src=""></audio>
+                 
+                    <script>
+                        
+                        
+                        var scale = document.getElementById("SelectPlayer").value
+                        var Player1 = document.getElementById("Player1");
+                        var Player2 = document.getElementById("Player2");
+                        var PlayerPlayButton = document.getElementById("PlayerPlayButton");
+                        var SelectPlayerOptions = document.getElementById("SelectPlayer");
+                        var PlayerPauseButton = document.getElementById("PlayerPauseButton");
+                        
+                        
+                        function SelectPlayer(){
+                            Player1.src= "surpeti1/"+document.getElementById("SelectPlayer").value+".mp3";
+                            Player2.src= "surpeti1/"+document.getElementById("SelectPlayer").value+".mp3";
+                        }
+
+                        
+                        Player1.ontimeupdate = function() {TanpuraTimeFunction()};       
+                        Player2.ontimeupdate = function() {TanpuraTimeFunction()};       
+                        function TanpuraTimeFunction() {
+                            if (Player1.currentTime > Player1.duration-5) {Player2.play();}
+                            if (Player2.currentTime > Player2.duration-5) {Player1.play();}
+                        }
+                        
+                        
+                        function PlayerPause() {
+							Player1.src= "";
+                            Player2.src= "";
+							ShowTanpura();
+						}
+                        function PlayerPlay() {Player1.play();HidePlayer();}
+                        function HidePlayer () {PlayerPlayButton.style.display = "none";SelectPlayerOptions.style.display = "none";PlayerPauseButton.style.display = "block";}
+                        function ShowTanpura () {PlayerPlayButton.style.display = "block";SelectPlayerOptions.style.display = "block";PlayerPauseButton.style.display = "none";}
+                    </script>
+                </td>
+            </tr>
+          
+        </table>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>
