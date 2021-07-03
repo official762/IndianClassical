@@ -121,10 +121,10 @@
                         }
                         
                         
-                        function PlayerPause() {
-							Player1.src= "";
-                            Player2.src= "";
-							ShowTanpura();
+                        function PlayerPause() {	
+				Player1.src= "surpeti1/"+document.getElementById("SelectPlayer").value+".mp3";
+				Player2.src= "surpeti1/"+document.getElementById("SelectPlayer").value+".mp3";
+				ShowTanpura();
 						}
                         function PlayerPlay() {Player1.play();HidePlayer();}
                         function HidePlayer () {PlayerPlayButton.style.display = "none";SelectPlayerOptions.style.display = "none";PlayerPauseButton.style.display = "block";}
