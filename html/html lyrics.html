@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Lyrics</title>
+
+<style>
+
+a {
+  color: red;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ============================= */
+/* FONT SIZE BUTTONS             */
+/* ============================= */
+
+.font-controls {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px 0;
+  z-index: 1000;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.font-controls button {
+  background-color: #777;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px 18px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.font-controls button:hover {
+  background-color: #555;
+}
+
+#fontSizeDisplay {
+  display: inline-block;
+  min-width: 55px;
+  font-size: 16px;
+  color: black;
+}
+
+
+/* ============================= */
+/* COLLAPSIBLE                   */
+/* ============================= */
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+}
+
+
+/* ============================= */
+/* LYRICS CONTENT                */
+/* ============================= */
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: visible;
+}
+
+
+/* ============================= */
+/* COLORS                        */
+/* ============================= */
+
+#cr {
+  color: darkorange;
+}
+
+#ch {
+  color: #00008B;
+}
+
+#oyhoi {
+  color: lightseagreen;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ============================= -->
+<!-- FONT SIZE CONTROLS             -->
+<!-- ============================= -->
+
+<div class="font-controls">
+
+  <button type="button" onclick="changeFontSize(-2)">
+    A −
+  </button>
+
+  <span id="fontSizeDisplay">
+    16px
+  </span>
+
+  <button type="button" onclick="changeFontSize(2)">
+    A +
+  </button>
+
+</div>
+
+
+<hr />
+
+<pre id="sufi"></pre>
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+
+    ------------------------------------------------------
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+
+<script>
+
+/* ========================================= */
+/* COLLAPSIBLE SONGS                         */
+/* ========================================= */
+
+var coll = document.getElementsByClassName("collapsible");
+
+for (var i = 0; i < coll.length; i++) {
+
+  coll[i].addEventListener("click", function() {
+
+    this.classList.toggle("active");
+
+    var content = this.nextElementSibling;
+
+    if (content.style.display === "block") {
+
+      content.style.display = "none";
+
+    } else {
+
+      content.style.display = "block";
+
+    }
+
+  });
+
+}
+
+
+/* ========================================= */
+/* FONT SIZE CONTROL                         */
+/* ========================================= */
+
+var savedFontSize = localStorage.getItem("lyricsFontSize");
+
+var fontSize;
+
+if (savedFontSize === null) {
+
+  fontSize = 16;
+
+} else {
+
+  fontSize = parseInt(savedFontSize);
+
+}
+
+
+/* Change font size */
+
+function changeFontSize(amount) {
+
+  fontSize = fontSize + amount;
+
+
+  /* Minimum font size */
+
+  if (fontSize < 10) {
+    fontSize = 10;
+  }
+
+
+  /* Maximum font size */
+
+  if (fontSize > 40) {
+    fontSize = 40;
+  }
+
+
+  /* Find all lyrics */
+
+  var lyrics = document.querySelectorAll(".content pre");
+
+
+  /* Change font size */
+
+  for (var i = 0; i < lyrics.length; i++) {
+
+    lyrics[i].style.fontSize = fontSize + "px";
+
+  }
+
+
+  /* Show current font size */
+
+  document.getElementById("fontSizeDisplay").textContent =
+    fontSize + "px";
+
+
+  /* Save font size */
+
+  localStorage.setItem("lyricsFontSize", fontSize);
+
+}
+
+
+/* ========================================= */
+/* APPLY SAVED FONT SIZE WHEN PAGE LOADS     */
+/* ========================================= */
+
+changeFontSize(0);
+
+</script>
+
+
+</body>
+</html>

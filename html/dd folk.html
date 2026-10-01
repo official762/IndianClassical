@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Lyrics</title>
+
+<style>
+
+a {
+  color: red;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ============================= */
+/* FONT SIZE BUTTONS             */
+/* ============================= */
+
+.font-controls {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px 0;
+  z-index: 1000;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.font-controls button {
+  background-color: #777;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px 18px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.font-controls button:hover {
+  background-color: #555;
+}
+
+#fontSizeDisplay {
+  display: inline-block;
+  min-width: 55px;
+  font-size: 16px;
+  color: black;
+}
+
+
+/* ============================= */
+/* COLLAPSIBLE                   */
+/* ============================= */
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+}
+
+
+/* ============================= */
+/* LYRICS CONTENT                */
+/* ============================= */
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: visible;
+}
+
+
+/* ============================= */
+/* COLORS                        */
+/* ============================= */
+
+#cr {
+  color: darkorange;
+}
+
+#ch {
+  color: #00008B;
+}
+
+#oyhoi {
+  color: lightseagreen;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ============================= -->
+<!-- FONT SIZE CONTROLS             -->
+<!-- ============================= -->
+
+<div class="font-controls">
+
+  <button type="button" onclick="changeFontSize(-2)">
+    A −
+  </button>
+
+  <span id="fontSizeDisplay">
+    16px
+  </span>
+
+  <button type="button" onclick="changeFontSize(2)">
+    A +
+  </button>
+
+</div>
+
+
+<hr />
+
+<pre id="sufi"></pre>
+
+
+<button type="button" class="collapsible" id="G5">51.Mor Bani / મોર બની થનગાટ કરે - E</button>
+<div class="content">
+  <pre>
+મોર બની થનગાટ કરે, મન મોર બની થનગાટ કરે.
+ઘનઘોર ઝરે ચહુ ઓર,મારું મન મોર બની થનગાટ કરે.
+બહુ રંગ ઉમંગનાં પીંછ પસારીને બાદલસું નિજ નેનન ધારીને
+મેઘમલાર ઉચારીને આકુલ પ્રાણ કોને કલ-સાદ કરે.
+મારું મન મોર બની થનગાટ કરે.
+
+ઘર ઘરર ઘરર મેઘઘટા ગગને ગગને ગરજાટ ભરે, ગુમરી ગુમરી ગરજાટ ભરે.
+નવે ધાન ભરી સારી સીમ ઝૂલે, નદીયું નવજોબન ભાન ભૂલે,
+નવ દીન કપોતની પાંખ ખૂલે
+મઘરા મઘરા મલકાઇને મેડક નેહસું નેહસું બાત કરે.
+ગગને ગગને ઘુમરાઇને પાગલ મેઘઘટા ગરજાટ ભરે.
+મન મોર બની…
+
+નવમેઘ તણે નીલ આંજણીએ મારાં ઘેઘૂર નેન ઝગાટ કરે, મારાં લોચનમાં મદઘેન ભરે
+પરછાઈ તળે હરિયાળી બની મારો આતમ નેન બિછાત કરે, સચરાચર શ્યામલ બાથ ધરે
+મારો પ્રાણ કરી પુલકાટ ગયો પથરાઇ સારી વનરાઇ પરે,
+ઓ રે ! મેઘ આષાઢીલો આજ મારે દોય, નેન નીલાંજન-ઘેન ભરે
+મન મોર બની…
+
+નદી-તીર કેરાં કૂણાં ઘાસ પરે પનિહારી એ કોણ વિચાર કરે, પટકૂળ નવે પાણી-ઘાટ પરે.
+એની સૂનમાં મીટ સમાઇ રહી, એની ગાગર નીર તણાઇ રહી, એને ઘેર જવા દરકાર નહીં.
+મુખ માલતીફૂલની કૂંપળ ચાવતી કોણ બીજા કેરું ધ્યાન ધરે,
+પનિહાર નવે શણગાર નદી કેરે, તીર ગંભીર વિચાર કરે.
+મન મોર બની…
+
+ઓલી કોણ કરી લટ મોકળીયું ખડી આભ-મહેલ અટારી પરે, ઊંચી મેઘ-મહેલ અટારી પરે.
+અને ચાકચમૂર બે ઉર પરે પચરંગીન, બાદલ-પાલવડે કરી આડશ કોણ ઊભેલ અરે.
+ઓલી વીજ કેરે અંજવાસ નવેસર રાસ લેવા અંકલાશ ચડે,
+ઓલી કોણ પયોધર સંઘરતી વિખરેલ લટે ખડી મે’લ પરે.
+મન મોર બની…
+
+ઓલી કોણ હિંડોળ ચગાવત એકલ ફૂલ બકુલની ડાળ પરે, ચકચૂર બની ફૂલ-ડાળ પરે.
+વિખરેલ અંબોડાના અળ ઝૂલે, દિયે દેહ-નીંડોળ ને ડાળ હલે.
+એની ઘાયલદેહના છાયલ-છેડલા આભ ઊડી ફરકાટ કરે,
+ઓલી કોણ ફંગોળ લગાવત એકલ ફૂલ બકુલની ડાળ પરે.
+મોર બની થનગાટ કરે આજે
+મન મોર બની…
+
+– ઝવેરચંદ મેઘાણી
+  </pre>
+    </div>
+
+
+
+
+
+<button type="button" class="collapsible" id="B4">52.chadariya jini</button>
+<div class="content">
+
+  <pre>
+
+कबीरा जब हम पैदा हुए,
+जग हँसे,हम रोये ।
+ऐसी करनी कर चलो,
+हम हँसे,जग रोये ॥
+
+चदरिया झीनी रे झीनी
+राम नाम रस भीनी
+चदरिया झीनी रे झीनी
+
+अष्ट-कमल का चरखा बनाया,
+पांच तत्व की पूनी ।
+नौ-दस मास बुनन को लागे,
+मूरख मैली किन्ही ॥
+चदरिया झीनी रे झीनी...
+
+जब मोरी चादर बन घर आई,
+रंगरेज को दीन्हि ।
+ऐसा रंग रंगा रंगरे ने,
+के लालो लाल कर दीन्हि ॥
+चदरिया झीनी रे झीनी...
+
+<hr />
+
+Chadariya Jhini re jhini
+Raam naam ras bini chadariya
+Jhini re jhini
+
+Asht kamal dal charkha chaale
+Paanch tatva ki puni
+Nau das maas bunan ko laage
+Murakh maili kini chadariya
+
+Chadar od sankha mat kariyo
+Do din tumko deeni
+Murakh log bhed nahi jaane
+Din din maili kini chadariya
+
+Dhruv prahlad sudama ne odi
+Sukhdev nirmal kini
+Das Kabir jatan kar odi
+Jyon ki tyon kar deeni chadariya
+  
+  </pre>
+    </div>
+
+
+<button type="button" class="collapsible" id="C4">53.Fakiri</button>
+<div class="content">
+
+  <pre>
+insaan ke rahim ram ke aage
+ishwar ke har naam ke aage
+bhakton ke kaafir ke aage
+shunaya pratham akhir ke aage
+
+ho khadaa re kabir pahane apanee garibi
+seena thoke chhanta hai apanee faqiri
+duniyaa ka bhay nahin bole sachhee bolee re
+chhinega kya koyi usse khaali uski jholii re
+badee takat hai garibi mein
+
+jo sukh payo ram bhajan mein, ho
+jo sukh payo ram bhajan mein
+jo sukh payo ram bhajan mein
+vo sukh naahi amiri mein, ho-ho
+vo sukh naahi amiri mein
+
+man laago mero yaar garibi mein
+man laago mero yaar faqiri mein
+man laago mero yaar garibi mein
+man laago mero yaar faqiri mein
+man laago mero yaar garibi mein
+
+akhir ye tan khaakh mein milegaa, ho
+akhir ye tan khaakh mein milegaa
+akhir ye tan khaakh mein milegaa
+kyon firai magaruri mein, ho-ho?
+kyon firai magaruri mein?
+
+man laago mero yaar garibi mein
+man laago mero yaar faqiri mein
+
+kahe kabir sunau bhai saadho
+kahe kabir sunau bhai saadho
+kahe kabir sunau bhai saadho
+sahib milegaa saburi mein, ho-ho
+sahib milegaa saburi mein
+
+man laago mero yaar garibi mein
+man laago mero yaar faqiri mein
+man laago mero yaar garibi mein
+man laago mero yaar faqiri mein
+
+ho, man laago mero yaar garibi mein
+ho, man laago mero yaar faqiri mein
+ho man
+  
+  
+  
+  </pre>
+    </div>
+
+
+<button type="button" class="collapsible" id="G4">54.Nagar Me Jogi Aaya</button>
+<div class="content">
+  <pre>
+
+
+ऊँचे ऊँचे मंदिर तेरे 
+ऊँचा है तेरा धाम 
+हे कैलाश के वासी भोलेबाबा 
+हम सब करते है तुम्हे प्रणाम 
+
+नगर में जोगी आया 
+भेद कोई समझ ना पाया 
+अजब है तेरी माया 
+सब से बड़ा है तेरा नाम 
+भोलेनाथ भोलेनाथ भोलेनाथ
+
+अंग विभुती गले रूद्र माला 
+शेषनाग लिपटाओ, 
+सिर पे गंगा भाल चन्द्रमा 
+घर घर अलख जगायो 
+यशोदा के घर आया, 
+आके अलख जगाया
+सब से बड़ा है तेरा नाम 
+भोलेनाथ भोलेनाथ भोलेनाथ
+
+ले भिक्षा निकली नंदरानी 
+कंचन थाल भरायो 
+ले भिक्षा जा जोगी आसन 
+मेरो लाल डरायो 
+नगर में जोगी आया भेद 
+कोई समझ ना पाया
+सब से बड़ा है तेरा नाम 
+भोलेनाथ भोलेनाथ भोलेनाथ  
+
+
+ना चाहिए तेरी दौलत दुनिया 
+ना ही कंचन माया
+अपने लाल का दरश करादे 
+मै दर्शन को आया 
+नगर में जोगी आया 
+भेद कोई समझ ना पाया 
+सब से बड़ा है तेरा नाम 
+भोलेनाथ भोलेनाथ भोलेनाथ
+
+तिन लोक के कर्ताधर्ता 
+तेरी गोद में आया 
+सूरदास बलिहारी कन्हैया 
+यशोमती दिखलाया 
+नगर में जोगी आया 
+भेद कोई समझ ना पाया 
+सब से बड़ा है तेरा नाम 
+भोलेनाथ भोलेनाथ भोलेनाथ
+
+  </pre>
+    </div>
+
+
+
+<button type="button" class="collapsible" id="A2">55.Padharo Mare Desh</button>
+<div class="content">
+  <pre>
+
+Ho saajan saajan main karoon 
+To saajan jeev jadi 
+Saajan phool gulaab ro 
+Sunghu ghadi ghadi
+Ho ji kasariya baalam aavo ni 
+Padharo maare des re 
+Padharo maare des re 
+Padharo maare des re
+
+
+
+Maaru thara desh mein 
+Nipje teen ratan 
+Ek dhola ek marman 
+Tejo kasuman rang re
+Ho ji kesariya balam aavo ni 
+Padharo maare des re 
+Padharo maare des re 
+Padharo maare des..
+  </pre>
+    </div>
+
+
+
+    
+    
+<button type="button" class="collapsible" id="G5">Eri Sakhi - E*</button>
+<div class="content">
+  <pre>
+  
+      </pre>
+    </div>
+    
+    
+    
+    
+    
+        
+    
+<button type="button" class="collapsible" id="G5">Shiv Kailasho Ke Vasi - G*</button>
+<div class="content">
+  <pre>
+  
+      </pre>
+    </div>
+    
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+<button type="button" class="collapsible">****</button>
+
+<div class="content">
+<pre>
+****
+</pre></div>
+
+    
+
+
+
+
+
+
+
+    ------------------------------------------------------
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+
+<script>
+
+/* ========================================= */
+/* COLLAPSIBLE SONGS                         */
+/* ========================================= */
+
+var coll = document.getElementsByClassName("collapsible");
+
+for (var i = 0; i < coll.length; i++) {
+
+  coll[i].addEventListener("click", function() {
+
+    this.classList.toggle("active");
+
+    var content = this.nextElementSibling;
+
+    if (content.style.display === "block") {
+
+      content.style.display = "none";
+
+    } else {
+
+      content.style.display = "block";
+
+    }
+
+  });
+
+}
+
+
+/* ========================================= */
+/* FONT SIZE CONTROL                         */
+/* ========================================= */
+
+var savedFontSize = localStorage.getItem("lyricsFontSize");
+
+var fontSize;
+
+if (savedFontSize === null) {
+
+  fontSize = 16;
+
+} else {
+
+  fontSize = parseInt(savedFontSize);
+
+}
+
+
+/* Change font size */
+
+function changeFontSize(amount) {
+
+  fontSize = fontSize + amount;
+
+
+  /* Minimum font size */
+
+  if (fontSize < 10) {
+    fontSize = 10;
+  }
+
+
+  /* Maximum font size */
+
+  if (fontSize > 40) {
+    fontSize = 40;
+  }
+
+
+  /* Find all lyrics */
+
+  var lyrics = document.querySelectorAll(".content pre");
+
+
+  /* Change font size */
+
+  for (var i = 0; i < lyrics.length; i++) {
+
+    lyrics[i].style.fontSize = fontSize + "px";
+
+  }
+
+
+  /* Show current font size */
+
+  document.getElementById("fontSizeDisplay").textContent =
+    fontSize + "px";
+
+
+  /* Save font size */
+
+  localStorage.setItem("lyricsFontSize", fontSize);
+
+}
+
+
+/* ========================================= */
+/* APPLY SAVED FONT SIZE WHEN PAGE LOADS     */
+/* ========================================= */
+
+changeFontSize(0);
+
+</script>
+
+
+</body>
+</html>
